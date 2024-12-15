@@ -6,3 +6,10 @@ squirrel_images
 augmented_squirrel_images
 lawn
 data
+test_images
+data2
+old_data
+
+models
+squirrel_classifier_v2.pth
+squirrel_classifier_v3.pth

@@ -10,7 +10,7 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device {device}")
 
 # define dirs
-data_dir = "data"
+data_dir = "data2"
 train_dir = os.path.join(data_dir, "train")
 val_dir = os.path.join(data_dir, "val")
 
@@ -48,7 +48,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
 # training loop
-epochs = 5
+epochs = 30
 for epoch in range(epochs):
     print(f"Epoch {epoch + 1}/{epochs}")
     model.train()
@@ -95,4 +95,4 @@ for epoch in range(epochs):
 
 print("Traing complete!")
 
-torch.save(model.state_dict(), "squirrel_classifier.pth")
+torch.save(model.state_dict(), "squirrel_classifier_v3.pth")
